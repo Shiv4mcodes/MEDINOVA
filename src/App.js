@@ -132,6 +132,7 @@ function App() {
     const saved = localStorage.getItem("medinova_caregiverEmail");
     return saved ? saved : "";
   });
+  // eslint-disable-next-line no-unused-vars
   const [caregiverNotif, setCaregiverNotif] = useState(() => {
     const saved = localStorage.getItem("medinova_caregiverNotif");
     return saved ? saved === "true" : true;

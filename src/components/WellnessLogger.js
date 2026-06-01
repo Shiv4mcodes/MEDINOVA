@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, VStack, Heading, Text, Flex, HStack, Input, SimpleGrid, Button, Badge } from "@chakra-ui/react";
+import { Box, VStack, Heading, Text, Flex, HStack, SimpleGrid, Button, Badge } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 const MotionBox = motion(Box);
