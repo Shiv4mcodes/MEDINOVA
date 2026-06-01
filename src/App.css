@@ -1,0 +1,217 @@
+/* App.css - Premium Aesthetics & Fluid Animations for VibeMed */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Ambient Background Blobs */
+.bg-blob-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  filter: blur(160px);
+  opacity: 0.9;
+}
+
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.blob-purple {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.45) 0%, rgba(139, 92, 246, 0) 70%);
+  top: -100px;
+  left: 5%;
+  animation: floatBlob1 22s infinite alternate ease-in-out;
+}
+
+.blob-teal {
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.35) 0%, rgba(45, 212, 191, 0) 70%);
+  bottom: -100px;
+  right: 10%;
+  animation: floatBlob2 25s infinite alternate ease-in-out;
+}
+
+.blob-amber {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.28) 0%, rgba(245, 158, 11, 0) 70%);
+  top: 35%;
+  left: 40%;
+  animation: floatBlob3 28s infinite alternate ease-in-out;
+}
+
+@keyframes floatBlob1 {
+  0% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(60px, 40px) scale(1.1); }
+  100% { transform: translate(-30px, -20px) scale(0.9); }
+}
+
+@keyframes floatBlob2 {
+  0% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(-70px, -50px) scale(0.85); }
+  100% { transform: translate(40px, 30px) scale(1.05); }
+}
+
+@keyframes floatBlob3 {
+  0% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(40px, -60px) scale(1.15); }
+  100% { transform: translate(-50px, 40px) scale(0.95); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.02);
+}
+.dark ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.01);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.3);
+}
+
+/* Glass panel styling overrides */
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(139, 92, 246, 0.15);
+  border-color: rgba(139, 92, 246, 0.3) !important;
+}
+
+/* Scanning Laser Animation */
+@keyframes scanLaser {
+  0% { top: 0%; opacity: 0.6; }
+  50% { top: 100%; opacity: 1; }
+  100% { top: 0%; opacity: 0.6; }
+}
+
+.scanner-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanner-laser {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2dd4bf, #8b5cf6, #2dd4bf, transparent);
+  box-shadow: 0 0 12px 2px rgba(139, 92, 246, 0.6);
+  z-index: 10;
+  animation: scanLaser 3.5s infinite linear;
+}
+
+/* Pulse Animation for Video waveform */
+@keyframes wavePulse {
+  0% { transform: scaleY(0.25); }
+  50% { transform: scaleY(1); }
+  100% { transform: scaleY(0.25); }
+}
+
+.pulse-bar {
+  display: inline-block;
+  width: 4px;
+  height: 32px;
+  margin: 0 2px;
+  background-color: #8b5cf6;
+  border-radius: 2px;
+  transform-origin: bottom;
+  animation: wavePulse 1.4s infinite ease-in-out;
+}
+
+.pulse-bar:nth-child(2) { animation-delay: 0.15s; background-color: #a78bfa; }
+.pulse-bar:nth-child(3) { animation-delay: 0.3s; background-color: #2dd4bf; }
+.pulse-bar:nth-child(4) { animation-delay: 0.45s; background-color: #0d9488; }
+.pulse-bar:nth-child(5) { animation-delay: 0.6s; background-color: #8b5cf6; }
+.pulse-bar:nth-child(6) { animation-delay: 0.75s; background-color: #a78bfa; }
+
+/* Custom Glow Widget */
+.glow-widget {
+  box-shadow: 0 8px 32px 0 rgba(139, 92, 246, 0.04);
+  transition: box-shadow 0.3s ease;
+}
+.glow-widget:hover {
+  box-shadow: 0 8px 32px 0 rgba(139, 92, 246, 0.12);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.float-animation {
+  animation: float 5s infinite ease-in-out;
+}
+
+/* Transition utility */
+.transition-all-custom {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Premium Dashboard Grid Layout */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 991px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Brand text styling */
+.brand-logo-text {
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 2.25rem !important;
+  letter-spacing: -0.04em !important;
+  background: linear-gradient(135deg, #a78bfa 0%, #2dd4bf 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: 0 0 40px rgba(139, 92, 246, 0.08) !important;
+  line-height: 1.1 !important;
+}
+
+.brand-subtitle-text {
+  font-size: 0.625rem !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  opacity: 0.85 !important;
+  color: #8b5cf6 !important;
+  margin-top: 2px !important;
+}
+
+.dark .brand-subtitle-text {
+  color: #a5b4fc !important;
+}
