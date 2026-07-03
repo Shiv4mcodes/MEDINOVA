@@ -232,44 +232,6 @@ Create production build
 npm run build
 ```
 
----
-
-# 📷 Screenshots
-
-## Dashboard
-
-> Add your main dashboard screenshot here
-
-```
-/screenshots/dashboard.png
-```
-
----
-
-## Medication Tracker
-
-```
-/screenshots/medication.png
-```
-
----
-
-## Wellness Tracker
-
-```
-/screenshots/wellness.png
-```
-
----
-
-## AI Prescription OCR
-
-```
-/screenshots/ocr.png
-```
-
----
-
 # 🏗 Project Architecture
 
 ```
