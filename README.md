@@ -317,7 +317,7 @@ https://github.com/Shiv4mcodes
 
 <div align="center">
 
-### ⭐ If you found this project interesting, consider giving it a star.
+### ⭐ If you found this project interesting, consider giving it a star
 
 Built with ❤️ by Shivam Mishra
 
