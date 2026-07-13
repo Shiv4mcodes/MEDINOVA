@@ -4,7 +4,7 @@
 
 ### Intelligent Medication Care & Personal Health Companion
 
-A modern healthcare platform that combines medication management, AI-assisted prescription processing, wellness tracking, and accessibility features into one intuitive dashboard.
+A modern healthcare platform that combines medication management,AI-assisted prescription processing, wellness tracking, and accessibility features into one intuitive dashboard.
 
 <p>
 
