@@ -21,7 +21,7 @@ https://medinova-six.vercel.app/
 
 </div>
 
----
+-------
 
 # 📖 About MEDINOVA
 
